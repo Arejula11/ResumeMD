@@ -268,8 +268,8 @@ print("Projects section created.")
 # -----------------------------
 # Template filling
 # -----------------------------
-template_file = "latexTemplate.tex"
-output_file = "output_cv.tex"
+template_file = "./input/latexTemplate.tex"
+output_file = "./output/output_cv.tex"
 
 with open(template_file, "r", encoding="utf-8") as f:
     template = f.read()
