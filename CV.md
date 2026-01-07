@@ -1,15 +1,10 @@
-# ResumeMD
-
-## Markdown Structure Example
-```md
 # Miguel Aréjula Aísa
-
 ## Contact Information
-- Email: string
-- Phone: string
-- LinkedIn: string
-- GitHub: string
-- Web: string
+- Email: arejula10@gmail.com
+- Phone: +34 601 49 10 89
+- LinkedIn: https://www.linkedin.com/in/miguel-arejula-aisa-653088291
+- GitHub: https://github.com/Arejula11
+- Blog: https://www.are-dev.es
 
 ## Education
 
@@ -61,4 +56,3 @@
 - Expected insights include: renewable energy impact, peak price periods, seasonal patterns, and cost optimization windows.
 - Applying big data frameworks and machine learning models to process large-scale datasets and deliver predictive analytics.
 - Tools Used: Kafka, HDFS, Kubernetes, Hive, Spark, Python.
-`````
