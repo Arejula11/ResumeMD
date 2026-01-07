@@ -1,4 +1,12 @@
 # ResumeMD
+ResumeMD is a Python-based tool designed to convert Markdown-formatted CV into my personalized LaTeX resume format. It streamlines the process of maintaining and updating my CV by allowing me to write in Markdown, which is then programmatically transformed into a polished LaTeX document.
+
+## Usage
+1. Ensure you have Python and LaTeX installed on your system.
+2. Execute the script using:
+   ```bash
+    python3 ./src/render.py input/CV.md
+   ```
 
 ## Markdown Structure Example
 ```md
@@ -61,4 +69,6 @@
 - Expected insights include: renewable energy impact, peak price periods, seasonal patterns, and cost optimization windows.
 - Applying big data frameworks and machine learning models to process large-scale datasets and deliver predictive analytics.
 - Tools Used: Kafka, HDFS, Kubernetes, Hive, Spark, Python.
-`````
+```
+
+
