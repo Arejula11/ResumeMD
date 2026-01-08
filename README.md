@@ -1,14 +1,44 @@
 # ResumeMD
-ResumeMD is a Python-based tool designed to convert Markdown-formatted CV into my personalized LaTeX resume format. It streamlines the process of maintaining and updating my CV by allowing me to write in Markdown, which is then programmatically transformed into a polished LaTeX document.
+
+ResumeMD is a Python-based tool that converts Markdown-formatted CVs into a personalized LaTeX resume template. It simplifies the process of maintaining and updating a CV by letting you write in Markdown, which is then programmatically transformed into a polished, LaTeX-generated PDF.
+
+
+
+## Features
+
+* Write your CV in Markdown and generate a LaTeX PDF automatically.
+* Supports sections for **Contact Information**, **Education**, **Experience**, and **Projects**.
+* Preserves structured formatting and styling from the template.
+* Easily extendable to multiple templates in the future.
+
+
+
+## Requirements
+
+* **Python 3**
+* **LaTeX** installed locally (`pdflatex` must be available in your PATH)
+
+  * On macOS: [MacTeX](https://tug.org/mactex/) or [BasicTeX](https://tug.org/mactex/morepackages.html)
+
+
 
 ## Usage
-1. Ensure you have Python and LaTeX installed on your system.
-2. Execute the script using:
-   ```bash
-    python3 ./src/render.py input/CV.md
-   ```
+
+1. Prepare your CV in Markdown using the expected structure (see example below).
+2. Run the renderer:
+
+```bash
+python3 ./src/render.py input/CV.md
+```
+
+This generates:
+
+* `output_cv.tex` — the LaTeX source file
+* `output_cv.pdf` — the final PDF CV
+
 
 ## Markdown Structure Example
+Here's an example of how to structure your CV in Markdown, in case you want to see a full example you can check the [input/CV.md](input/CV.md) file included in this repository:
 ```md
 # Miguel Aréjula Aísa
 
@@ -23,52 +53,49 @@ ResumeMD is a Python-based tool designed to convert Markdown-formatted CV into m
 
 ### Master in Software Engineering | University of Southern Denmark
 > Sept 2025 – June 2027
-- Coursework: Advanced Software Engineering Methodologies, Advanced Software Architecture and Analysis Techniques, Big Data and Data Science Technology
+- Coursework: Advanced Software Engineering Methodologies, Advanced Software Architecture, Big Data and Data Science Technology
 
 ### Bachelor in Software Engineering | University of Zaragoza
 > Sept 2021 – June 2025
-- Coursework: Software Engineer, Distributed Systems, Software Architecture, Prerequisite Engineering, Verification and Validation, Agile Methodologies and Quality, and Artificial Intelligence.
-- Achieved high honors in Information Systems II and Verification and Validation, demonstrating exceptional proficiency and understanding in these subjects.
-
-### Cambridge English  Advance
-> July 2024
-
-## Experience
-
-### Software Engineer | University of Zaragoza
-> June 2024 – August 2025
-- Researcher in project TED2021-130449B-I00 at the University of Zaragoza, where I led development of a custom web application for the Traumatology Department (Hospital Clínico Lozano Blesa), from requirements gathering with medical staff to architecture design and final delivery.
-- Developed a full-stack system using React and PostgreSQL, with RESTful APIs in Express and FastAPI, streamlining operations and expected to support ~50 patients per day, enhancing efficiency and quality of care.
-- Integrated and processed structured clinical data (CSV-based surgical records) into a relational model, enabling generation and validation of clinical pathways through Petri nets and formal methods.
-
-### Teaching Assistant (Incoming) | SDU
-> Starting February 2026
-- Support students in understanding core software architecture concepts by assisting with lab sessions, assignments, and problem-solving, while clearly explaining technical concepts and collaborating with professors.
-
-## Projects
-
-### Are-Dev | are-dev.es | are-dev.es
-- Are-dev is a personal technical blog and YouTube channel focused on software development, front-end technologies, and modern frameworks.
-- Publish blog posts and videos, sharing tutorials, project walk-throughs, and insights to engage the developer community.
-- Tools Used: Astro, Vercel, Markdown.
-
-### I4 Pizza Production System | github.com/I4-Pizza | https://github.com/The-European-Avengers/pizza-i4-architecture-group2
-- Industry 4.0 pizza production system integrating warehouse, production line, and web platform via a distributed architecture.
-- Designed, validated, and documented the system architecture using ADD, covering requirements, use cases, microservice boundaries, formal verification with UPPAAL, and experimental evaluation.
-- Led system-level coordination, ensured architectural consistency, and supervised implementation. 
-- Tools Used: Go, Python, Kafka, Docker, UPPAAL.
-
-### AgroNet | github.com/AgroNet | https://github.com/STW-24-25
--  Designed and developed a full-stack collaborative web platform for farmers, integrating real-time market prices, personalized weather alerts, and interactive geospatial data visualization across Spain.
--  Led the front-end team, developed the web application, and deployed it on Vercel.
--  Managed communication with the backend hosted on AWS, ensuring reliable API integration and real-time data synchronization.
-- Tools Used: Astro, NodeJs, TypeScript, MongoDB, AWS, Vercel.
-
-### Energy Price Prediction | github.com/BigDataProject | https://github.com/The-European-Avengers/BigDataProject
-- Using Danish Meteorological Institute (DMI) weather datasets and national energy consumption/price data to analyze correlations and forecast future electricity prices.
-- Expected insights include: renewable energy impact, peak price periods, seasonal patterns, and cost optimization windows.
-- Applying big data frameworks and machine learning models to process large-scale datasets and deliver predictive analytics.
-- Tools Used: Kafka, HDFS, Kubernetes, Hive, Spark, Python.
+- Coursework: Software Engineer, Distributed Systems, Software Architecture, Verification and Validation, AI
+- Achieved high honors in Information Systems II and Verification and Validation
 ```
 
+>(Experience and Projects follow the same pattern as Education, with `### Title | Organization` and optional `> Dates` and `- bullets`.)
+
+
+
+## Quick Visual Example
+
+The previous Markdown example renders in PDF as:
+
+![ResumeMD Example](docs/resume_example.png)
+
+
+
+## Contribution
+
+Contributions are welcome! You can help by:
+
+* Improving Markdown parsing and error handling.
+* Adding new LaTeX templates.
+* Extending functionality for custom sections or formatting.
+* Reporting bugs or suggesting enhancements via GitHub Issues.
+
+To contribute:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make your changes
+4. Commit (`git commit -m "Add feature"`)
+5. Push (`git push origin feature-name`)
+6. Open a Pull Request
+
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software, as long as the original license is included.
 
